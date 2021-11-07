@@ -44,8 +44,8 @@ function validation(acc, nam, email, pass, date, sal, time) {
     isvalid &= valid.checkEmpty(acc, "Tài khoản không được để trống!", "tbTKNV") && valid.checkAcount(acc, "Tài khoản bị trùng!", "tbTKNV", staffList.arrStaff);
     isvalid &= valid.checkEmpty(nam, "Họ và tên không được để trống!", "tbTen") && valid.checkName(nam, "Họ và tên phải là ký tự chữ", "tbTen");
     isvalid &= valid.checkEmpty(email, "Email không được để trống!", "tbEmail") && valid.checkEmail(email, "Email chưa đúng định dạng!", "tbEmail");
-    isvalid &= valid.checkEmpty(pass, "Mật khẩu không được để trống!", "tbMatKhau") && valid.checkPass(pass, "Mật khẩu chưa đúng định dạng!", "tbMatKhau");
-    isvalid &= valid.checkDate(date, "Ngày tháng năm không hợp lệ!", "tbNgay");
+    isvalid &= valid.checkEmpty(pass, "Mật khẩu không được để trống!", "tbMatKhau") && valid.checkPass(pass, "Mật khẩu phải từ 6-10 ký tự và chứa ít nhất 1 ký tự số, 1 ký tự in hoa, 1 ký tự đặc biệt!", "tbMatKhau");
+    isvalid &= valid.checkDate(date, "Ngày làm việc theo định dạng mm/dd/yyyy!", "tbNgay");
     isvalid &= valid.checkEmpty(sal, "Lương cơ bản không được để trống!", "tbLuongCB") && valid.checkSalary(sal, "Lương phải từ 1,000,000 đến 20,000,000 (VND)", "tbLuongCB");
     isvalid &= valid.checkPosition("chucvu", "Hãy chọn chức vụ!", "tbChucVu");
     isvalid &= valid.checkEmpty(time, "Số giờ làm việc không được để trống!", "tbGiolam") && valid.checkTime(time, "Số giờ làm việc phải từ 80 đến 200", "tbGiolam");
@@ -56,8 +56,8 @@ function validationUpdate(nam, email, pass, date, sal, time) {
     var isvalid = true;
     isvalid &= valid.checkEmpty(nam, "Họ và tên không được để trống!", "tbTen") && valid.checkName(nam, "Họ và tên phải là ký tự chữ", "tbTen");
     isvalid &= valid.checkEmpty(email, "Email không được để trống!", "tbEmail") && valid.checkEmail(email, "Email chưa đúng định dạng!", "tbEmail");
-    isvalid &= valid.checkEmpty(pass, "Mật khẩu không được để trống!", "tbMatKhau") && valid.checkPass(pass, "Mật khẩu chưa đúng định dạng!", "tbMatKhau");
-    isvalid &= valid.checkDate(date, "Ngày tháng năm không hợp lệ!", "tbNgay");
+    isvalid &= valid.checkEmpty(pass, "Mật khẩu không được để trống!", "tbMatKhau") && valid.checkPass(pass, "Mật khẩu phải từ 6-10 ký tự và chứa ít nhất 1 ký tự số, 1 ký tự in hoa, 1 ký tự đặc biệt!", "tbMatKhau");
+    isvalid &= valid.checkDate(date, "Ngày làm việc theo định dạng mm/dd/yyyy!", "tbNgay");
     isvalid &= valid.checkEmpty(sal, "Lương cơ bản không được để trống!", "tbLuongCB") && valid.checkSalary(sal, "Lương phải từ 1,000,000 đến 20,000,000 (VND)", "tbLuongCB");
     isvalid &= valid.checkPosition("chucvu", "Hãy chọn chức vụ!", "tbChucVu");
     isvalid &= valid.checkEmpty(time, "Số giờ làm việc không được để trống!", "tbGiolam") && valid.checkTime(time, "Số giờ làm việc phải từ 80 đến 200", "tbGiolam");
