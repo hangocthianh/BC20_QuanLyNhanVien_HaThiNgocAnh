@@ -132,6 +132,14 @@ function update() {
 }
 getELE("btnCapNhat").onclick = update;
 
+// reset lại để thêm thông tin
+function resetAddInfo(){
+    getELE("formStaff").reset();
+    getELE("tknv").disabled = false;
+}
+getELE("btnThem").onclick = resetAddInfo;
+
+// tìm kiếm nhân viên theo xếp loại
 getELE("btnTimNV").onclick = function(){
     var keyWord = getELE("searchName").value;
     var arrkeyWord = staffList.searchStaff(keyWord);
